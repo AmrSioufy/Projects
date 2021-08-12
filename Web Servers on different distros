@@ -1,0 +1,133 @@
+### CentOS 7 ###
+
+## LAMP ##
+sudo yum install httpd
+sudo systemctl start httpd.service
+sudo systemctl enable httpd.service
+sudo firewall-cmd --permanent --zone=public --add-service=http
+sudo firewall-cmd --permanent --zone=public --add-service=https
+sudo firewall-cmd --reload
+sudo yum install mariadb-server mariadb
+sudo systemctl start mariadb
+sudo mysql_secure_installation
+sudo systemctl enable mariadb.service
+sudo yum install php php-mysql
+sudo systemctl restart httpd.service
+sudo yum install yum-utils –y
+sudo yum install epel-release –y
+sudo yum install http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+sudo yum-config-manager ––enable remi–php74
+sudo yum install php php-common php-opcache php-mcrypt php-cli php-gd php-curl php-mysql –y
+
+## Creating a virtual host ##
+sudo mkdir -p /var/www/example.com
+sudo nano /etc/httpd/conf.d/example.com.conf
+
+<VirtualHost *:80>
+    ServerName example.com
+    ServerAlias www.example.com
+    ServerAdmin webmaster@example.com
+    DocumentRoot /var/www/example.com/
+
+    <Directory /var/www/example.com/>
+        Options -Indexes +FollowSymLinks
+        AllowOverride All
+    </Directory>
+
+    ErrorLog /var/log/httpd/example.com-error.log
+    CustomLog /var/log/httpd/example.com-access.log combined
+</VirtualHost>
+
+sudo systemctl restart httpd
+
+## SSL Cert ##
+sudo yum install epel-release
+sudo yum install certbot python2-certbot-apache mod_ssl
+sudo certbot --apache -d example.com
+
+## Creating Wordpress in mariadb DATABASE ##
+sudo mysql -u root -p
+CREATE DATABASE wordpress;
+GRANT ALL ON wordpress.* TO 'wordpress'@'localhost' IDENTIFIED BY 'secret';
+FLUSH PRIVILEGES;
+quit
+
+## Installing Wordpress ##
+cd /var/www/example.com
+sudo wget https://wordpress.org/latest.tar.gz
+sudo tar xvzf latest.tar.gz
+sudo rm -v latest.tar.gz
+sudo chown -Rf apache:apache ./wordpress/
+sudo chmod -Rf 775 ./wordpress/
+sudo systemctl restart httpd
+
+### Ubuntu ###
+sudo sed -i /cosmic/bionoc ------ # Search for it #
+
+## LAMP ##
+sudo apt update
+sudo apt upgrade
+sudo apt install -y apache2 apache2-utils
+sudo systemctl start apache2
+sudo systemctl enable apache2
+sudo apt install mariadb-server mariadb-client
+sudo systemctl start mariadb
+sudo systemctl enable mariadb
+sudo mysql_secure_installation
+sudo apt install php libapache2-mod-php
+sudo a2enmod php7.2
+sudo systemctl restart apache2
+
+
+## Creating a virtual host ##
+sudo mkdir -p /var/www/example.com
+sudo chmod -R 755 /var/www
+
+sudo nano /etc/apache2/sites-available/example.com.conf
+
+<VirtualHost *:80>
+    ServerAdmin admin@example.com
+    ServerName example.com
+    ServerAlias www.example.com
+    DocumentRoot /var/www/example.com/
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+
+sudo systemctl reload apache2
+sudo a2ensite example.com.conf
+sudo a2dissite 000-default.conf
+sudo systemctl reload apache2
+
+## Creating Wordpress in mariadb DATABASE ##
+sudo mysql -u root -p
+CREATE DATABASE wordpress;
+GRANT ALL ON wordpress.* TO 'wordpress'@'localhost' IDENTIFIED BY 'secret';
+FLUSH PRIVILEGES;
+quit
+
+## Installing Wordpress ##
+cd /var/www/example.com
+sudo wget https://wordpress.org/latest.tar.gz
+sudo tar xvzf latest.tar.gz
+sudo rm -v latest.tar.gz
+sudo chown -Rf www-data:www-data ./wordpress/
+sudo chmod -Rf 775 ./wordpress/
+sudo systemctl restart apache2
+
+## Allowing ufw firewall then Installing SSL Cert ##
+sudo a2enmod ssl
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+sudo ufw allow ssh
+sudo ufw allow 22
+sudo ufw enable
+sudo ufw allow 'Apache Full'
+sudo ufw delete allow 'Apache'
+sudo ufw allow '443/tcp'
+sudo ufw allow '443'
+sudo add-apt-repository ppa:certbot/certbot
+sudo apt install python-certbot-apache
+sudo certbot --apache -d amr.test.safaamsa.com
+sudo certbot renew --dry-run
+sudo apache2ctl configtest % Checks if virtualhost conf file has syntax error %
