@@ -61,6 +61,67 @@ sudo chown -Rf apache:apache ./wordpress/
 sudo chmod -Rf 775 ./wordpress/
 sudo systemctl restart httpd
 
+### CentOS 8 ###
+
+## Installing LAMP ##
+sudo dnf install httpd httpd-tools
+sudo systemctl enable httpd
+sudo systemctl start httpd
+sudo firewall-cmd --permanent --zone=public --add-service=http
+sudo firewall-cmd --permanent --zone=public --add-service=https
+sudo firewall-cmd --reload
+sudo dnf install mariadb-server mariadb -y
+sudo systemctl start mariadb
+sudo systemctl enable mariadb
+sudo mysql_secure_installation
+sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-l
+sudo dnf install dnf-utils http://rpms.remirepo.net/enterprise/remi
+sudo dnf module reset php
+sudo dnf module enable php:remi-7.4
+sudo dnf install php php-opcache php-gd php-curl php-mysqlnd
+
+## Creating a virtual host ##
+sudo mkdir -p /var/www/example.com
+sudo nano /etc/httpd/conf.d/example.com.conf
+
+<VirtualHost *:80>
+    ServerName example.com
+    ServerAlias www.example.com
+    ServerAdmin webmaster@example.com
+    DocumentRoot /var/www/example.com/
+
+    <Directory /var/www/example.com/>
+        Options -Indexes +FollowSymLinks
+        AllowOverride All
+    </Directory>
+
+    ErrorLog /var/log/httpd/example.com-error.log
+    CustomLog /var/log/httpd/example.com-access.log combined
+</VirtualHost>
+
+sudo systemctl restart httpd
+
+## SSL Cert ##
+sudo dnf install epel-release
+sudo dnf install certbot python3-certbot-apache mod_ssl
+sudo certbot --apache -d example.com
+
+## Creating Wordpress in mariadb DATABASE ##
+sudo mysql -u root -p
+CREATE DATABASE wordpress;
+GRANT ALL ON wordpress.* TO 'wordpress'@'localhost' IDENTIFIED BY 'secret';
+FLUSH PRIVILEGES;
+quit
+
+## Installing Wordpress ##
+cd /var/www/example.com/wordpress
+sudo wget https://wordpress.org/latest.tar.gz
+sudo tar xvzf latest.tar.gz
+sudo rm -v latest.tar.gz
+sudo chown -Rf apache:apache ./wordpress/
+sudo chmod -Rf 775 ./wordpress/
+sudo systemctl restart httpd
+
 ### Ubuntu ###
 sudo sed -i /cosmic/bionoc ------ # Search for it #
 
