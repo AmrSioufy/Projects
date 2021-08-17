@@ -63,7 +63,7 @@ sudo systemctl restart httpd
 
 ### CentOS 8 ###
 
-## Installing LAMP ##
+## LAMP ##
 sudo dnf install httpd httpd-tools
 sudo systemctl enable httpd
 sudo systemctl start httpd
@@ -75,12 +75,11 @@ sudo systemctl start mariadb
 sudo systemctl enable mariadb
 sudo mysql_secure_installation
 sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-l
-sudo dnf install dnf-utils http://rpms.remirepo.net/enterprise/remi
+sudo dnf install install dnf-utils http://rpms.remirepo.net/enterprise/remi-release-8.rpm
 sudo dnf module reset php
 sudo dnf module enable php:remi-7.4
 sudo dnf install php php-opcache php-gd php-curl php-mysqlnd
-
-## Creating a virtual host ##
+## Creating VirtualHost ##
 sudo mkdir -p /var/www/example.com
 sudo nano /etc/httpd/conf.d/example.com.conf
 
@@ -103,18 +102,16 @@ sudo systemctl restart httpd
 
 ## SSL Cert ##
 sudo dnf install epel-release
-sudo dnf install certbot python3-certbot-apache mod_ssl
-sudo certbot --apache -d example.com
-
-## Creating Wordpress in mariadb DATABASE ##
+sudo dnf install certbot python3-certbot-apache
+sudo certbot --apache -d amr.test.safaamsa.com
+## Creating wordpress in mariadb Database ##
 sudo mysql -u root -p
 CREATE DATABASE wordpress;
 GRANT ALL ON wordpress.* TO 'wordpress'@'localhost' IDENTIFIED BY 'secret';
 FLUSH PRIVILEGES;
 quit
-
 ## Installing Wordpress ##
-cd /var/www/example.com/wordpress
+cd /var/www/example.com
 sudo wget https://wordpress.org/latest.tar.gz
 sudo tar xvzf latest.tar.gz
 sudo rm -v latest.tar.gz
