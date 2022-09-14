@@ -1,14 +1,14 @@
 # This is a collection of projects that i have worked on
 
 ### Projects list
-1. Installation of High Availability Kubernetes cluster with the following specifications and deployments.
-2. Integrating on-premise LDAP Active Directory with Kubernetes cluster for user authentication in self-service applications(K8s Dashboard, Kubeapps)
+1. [Installation of High Availability Kubernetes cluster with the following specifications and deployments](/AmrSioufy/Projects/blob/main/HA-Kubernetes-Installation)
+2. [Integrating on-premise LDAP Active Directory with Kubernetes cluster for user authentication in self-service applications(K8s Dashboard, Kubeapps)](/AmrSioufy/Projects/blob/main/keycloak-ldap-integration)
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ### PROJECT ONE 
-##### Installation of High Availability Kubernetes cluster with the following specifications and deployments
+##### [Installation of High Availability Kubernetes cluster with the following specifications and deployments](/AmrSioufy/Projects/blob/main/HA-Kubernetes-Installation)
 
 
 spec:
@@ -38,6 +38,8 @@ env:
   &minus; MongoDB
   
   &minus; Prometheus and Grafana
+  
+  &minus; DMZ Node
   
   &minus; EFK (Elastic, Fluentd, Kibana)
   
