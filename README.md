@@ -11,7 +11,7 @@ spec:
   
   &minus; os-relase: RedHat 8.5
   
-  &minus; SELinux & Firewall disabled
+  &minus; Swap, SELinux & Firewall disabled
   
   &minus; mounted nfs server
   
