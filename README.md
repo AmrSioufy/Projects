@@ -1,7 +1,15 @@
 # This is a collection of projects that i have worked on
 
 ### Projects list
-Installation of High Availability Kubernetes cluster with the following specifications and deployments.
+1. Installation of High Availability Kubernetes cluster with the following specifications and deployments.
+2. Integrating on-premise LDAP Active Directory with Kubernetes cluster for user authentication in self-service applications(K8s Dashboard, Kubeapps)
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+### PROJECT ONE 
+##### Installation of High Availability Kubernetes cluster with the following specifications and deployments
+
 
 spec:
 
