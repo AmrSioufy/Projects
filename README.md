@@ -12,15 +12,15 @@
 
 ` spec: `
 
-  ` &minus; container_runtime: CRI-O `
+  &minus; `container_runtime: CRI-O `
   
-  &minus; kubernetes_version: 1.23
+  &minus; `kubernetes_version: 1.23`
   
-  &minus; os-relase: RedHat 8.5
+  &minus; `os-relase: RedHat 8.5`
   
-  &minus; Swap, SELinux & Firewall disabled
+  &minus; `Swap, SELinux & Firewall disabled`
   
-  &minus; mounted nfs server `
+  &minus; `mounted nfs server`
 
 env:
 
