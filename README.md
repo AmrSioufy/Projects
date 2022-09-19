@@ -8,7 +8,7 @@
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ### PROJECT ONE 
-##### [Installation of High Availability Kubernetes cluster with the following specifications and deployments](/AmrSioufy/Projects/blob/main/keycloak-ldap-integration)
+#### [Installation of High Availability Kubernetes cluster with the following specifications and deployments](/AmrSioufy/Projects/blob/main/keycloak-ldap-integration) ####
 
 
 spec:
@@ -43,3 +43,5 @@ env:
   
   &minus; EFK (Elastic, Fluentd, Kibana)
   
+### PROJECT TWO ###
+#### [Integrating on-premise LDAP Active Directory with Kubernetes cluster for user authentication in self-service applications(K8s Dashboard, Kubeapps) (WORK IN PROGRESS) ](/AmrSioufy/Projects/blob/main/keycloak-ldap-integration) ####
