@@ -42,6 +42,7 @@ env:
   &minus; DMZ Node
   
   &minus; EFK (Elastic, Fluentd, Kibana)
-  
+ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 
 ### PROJECT TWO ###
 #### [Integrating on-premise LDAP Active Directory with Kubernetes cluster for user authentication in self-service applications(K8s Dashboard, Kubeapps) (WORK IN PROGRESS) ](/AmrSioufy/Projects/blob/main/keycloak-ldap-integration) ####
