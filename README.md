@@ -22,7 +22,7 @@
   
   &minus; `mounted nfs server`
 
-env:
+`env:`
 
 ` #some deployments are deployed by helm (bitnami charts)`
 
