@@ -1,7 +1,7 @@
 # This is a collection of projects that i have worked on
 
 ### Projects list
-1. [Installation of High Availability Kubernetes cluster with the following specifications and deployments](/AmrSioufy/Projects/blob/main/HA-Kubernetes-Installation)
+1. [Installation of High Availability Kubernetes cluster](/AmrSioufy/Projects/blob/main/HA-Kubernetes-Installation)
 2. [Integrating on-premise LDAP Active Directory with Kubernetes cluster for user authentication in self-service applications(K8s Dashboard, Kubeapps) (WORK IN PROGRESS) ](/AmrSioufy/Projects/blob/main/keycloak-ldap-integration)
 
 
