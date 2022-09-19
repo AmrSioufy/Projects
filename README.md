@@ -30,17 +30,17 @@
   
   &minus; `NFS-Provisioner`
   
-  &minus; `MetalLB `
+  &minus; `LoadBalancer: MetalLB `
   
-  &minus; `Nginx ingress controller`
+  &minus; `Ingress Controller: Nginx ingress controller`
   
   &minus; `MongoDB`
   
-  &minus; `Prometheus and Grafana`
+  &minus; `Monitoring: Prometheus and Grafana`
   
-  &minus; `DMZ Node`
+  &minus; `Security: DMZ Node`
   
-  &minus; ` EFK (Elastic, Fluentd, Kibana) `
+  &minus; `Logging: EFK (Elastic, Fluentd, Kibana) `
   
  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
  
