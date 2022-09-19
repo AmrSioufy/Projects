@@ -10,9 +10,9 @@
 ### PROJECT ONE 
 #### [Installation of High Availability Kubernetes cluster with the following specifications and deployments](/AmrSioufy/Projects/blob/main/keycloak-ldap-integration) ####
 
-` spec:
+` spec: `
 
-  &minus; container_runtime: CRI-O
+  ` &minus; container_runtime: CRI-O `
   
   &minus; kubernetes_version: 1.23
   
