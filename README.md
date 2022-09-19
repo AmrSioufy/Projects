@@ -10,7 +10,7 @@
 ### PROJECT ONE 
 #### [Installation of High Availability Kubernetes cluster with the following specifications and deployments](/AmrSioufy/Projects/blob/main/keycloak-ldap-integration) ####
 
-
+'
 spec:
 
   &minus; container_runtime: CRI-O
@@ -22,7 +22,7 @@ spec:
   &minus; Swap, SELinux & Firewall disabled
   
   &minus; mounted nfs server
-  
+ ' 
 env:
 
 - some deployments are deployed by helm (bitnami charts)
