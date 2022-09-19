@@ -24,23 +24,23 @@
 
 env:
 
-- some deployments are deployed by helm (bitnami charts)
+` #some deployments are deployed by helm (bitnami charts)`
 
-  &minus; CNI: Flannel 
+  &minus; `CNI: Flannel` 
   
-  &minus; NFS-Provisioner
+  &minus; `NFS-Provisioner`
   
-  &minus; MetalLB 
+  &minus; `MetalLB `
   
-  &minus; Nginx ingress controller
+  &minus; `Nginx ingress controller`
   
-  &minus; MongoDB
+  &minus; `MongoDB`
   
-  &minus; Prometheus and Grafana
+  &minus; `Prometheus and Grafana`
   
-  &minus; DMZ Node
+  &minus; `DMZ Node`
   
-  &minus; EFK (Elastic, Fluentd, Kibana)
+  &minus; `EFK (Elastic, Fluentd, Kibana)`
  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
  
 ### PROJECT TWO ###
