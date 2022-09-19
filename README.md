@@ -3,8 +3,8 @@
 ### Projects list
 1. [Installation of High Availability Kubernetes cluster](https://github.com/AmrSioufy/Projects/blob/main/HA-Kubernetes-Installation)
 2. [Integrating on-premise LDAP Active Directory with Kubernetes cluster for user authentication in self-service applications(K8s Dashboard, Kubeapps) (WORK IN PROGRESS) ](https://github.com/AmrSioufy/Projects/blob/main/K8s%20LDAP%20integration%20using%20keycloak)
-3. [Installing traditonal webservers on CentOS, Ubuntu ](https://github.com/AmrSioufy/Projects/blob/main/Web%20Servers%20on%20different%20distros)
-4. [Linux based IoT Smart System to avoid collision between vehicles using Raspberry Pi](https://github.com/AmrSioufy/Raspberry-Pi)
+3. [Linux based IoT Smart System to avoid collision between vehicles using Raspberry Pi](https://github.com/AmrSioufy/Raspberry-Pi)
+4. [Installing traditonal webservers on CentOS, Ubuntu ](https://github.com/AmrSioufy/Projects/blob/main/Web%20Servers%20on%20different%20distros)
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ### PROJECT ONE 
@@ -53,10 +53,6 @@
 - keycloak will generate a JWT token to be used to authenticate the API user as well as to enable OAuth2 authorization for all OAuth protected APIs using OpenID Connect.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### PROJECT THREE ###
-
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-### PROJECT FOUR ###
 [Linux based IoT Smart System to avoid collision between vehicles using Raspberry Pi](https://github.com/AmrSioufy/Raspberry-Pi)
 #### Architecture
 - car_run.py > is the script that runs the car and processes data from distance sensor, stores car speed. based on that data decision is taken for different scenarios
@@ -70,3 +66,12 @@ To transmit a file you need to specify (Desitnation IP Address, Destination path
 After reading the sensor readings, data is stored in a text file to be fetched later for a decision inside the "car_run.py"
 
 *Every sensor script exports the data to a txt file which will be imported to the car_run.py for the buildup scenarios*
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+### PROJECT FOUR ###
+[Installing traditonal webservers on CentOS, Ubuntu ](https://github.com/AmrSioufy/Projects/blob/main/Web%20Servers%20on%20different%20distros)
+#### Scope
+Installations are done on CentOS 7 8, Ubuntu
+- Installed Apache, Nginx webservers while configuring SSL certs to its virtualhosts.
+- Installed Wordpress 
