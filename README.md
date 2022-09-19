@@ -22,7 +22,8 @@ spec:
   &minus; Swap, SELinux & Firewall disabled
   
   &minus; mounted nfs server
- ' 
+' 
+
 env:
 
 - some deployments are deployed by helm (bitnami charts)
