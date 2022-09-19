@@ -24,7 +24,7 @@
 
 `env:`
 
-` #some deployments are deployed by helm (bitnami charts)`
+` #some deployments are deployed by helm (bitnami charts)#`
 
   &minus; `CNI: Flannel` 
   
