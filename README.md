@@ -2,7 +2,7 @@
 
 ### Projects list
 1. [Installation of High Availability Kubernetes cluster](/AmrSioufy/Projects/blob/main/HA-Kubernetes-Installation)
-2. [Integrating on-premise LDAP Active Directory with Kubernetes cluster for user authentication in self-service applications(K8s Dashboard, Kubeapps) (WORK IN PROGRESS) ](/AmrSioufy/Projects/blob/main/keycloak-ldap-integration)
+2. [Integrating on-premise LDAP Active Directory with Kubernetes cluster for user authentication in self-service applications(K8s Dashboard, Kubeapps) (WORK IN PROGRESS) ](https://github.com/AmrSioufy/Projects/blob/main/K8s%20LDAP%20integration%20using%20keycloak)
 3. [Installing traditonal webservers on CentOS, Ubuntu ](https://github.com/AmrSioufy/Projects/blob/main/Web%20Servers%20on%20different%20distros)
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -45,7 +45,7 @@
  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
  
 ### PROJECT TWO ###
-#### [Integrating on-premise LDAP Active Directory with Kubernetes cluster for user authentication in self-service applications(K8s Dashboard, Kubeapps) (WORK IN PROGRESS) ](/AmrSioufy/Projects/blob/main/keycloak-ldap-integration) ####
+#### [Integrating on-premise LDAP Active Directory with Kubernetes cluster for user authentication in self-service applications(K8s Dashboard, Kubeapps) (WORK IN PROGRESS) ](https://github.com/AmrSioufy/Projects/blob/main/K8s%20LDAP%20integration%20using%20keycloak) ####
 
 #### Scope
 - The first approach taken is to authenticate groups of users in the LDAP active directory for a kubernetes cluster. This is where Keycloak's first job comes in as an authenticator using its (User federation). Keycloak is deployed in the cluster and administered by accessing its Ingress host.
