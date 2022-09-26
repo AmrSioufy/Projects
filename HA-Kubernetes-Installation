@@ -253,6 +253,8 @@ sudo yum install bash-completion -y
 echo 'source <(kubectl completion bash)' >> ~/.bashrc
 source <(kubectl completion bash)
 kubectl completion bash | sudo tee /etc/bash_completion.d/kubectl
+source /usr/share/bash-completion/bash_completion
+
 
 #######################################################################################################################################################################
 #############################################################################################################################################
