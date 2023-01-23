@@ -1,3 +1,0 @@
-[submodule "Kubernetes-init"]
-	path = Kubernetes-init
-	url = https://github.com/AmrSioufy/Kubernetes-init
