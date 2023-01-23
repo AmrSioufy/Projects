@@ -80,7 +80,6 @@ Installations are done on CentOS 7 8, Ubuntu
 
 ### PROJECT FIVE ###
 [Ansible Role for Installing a Kubernetes Cluster](https://github.com/AmrSioufy/Kubernetes-init) ~ https://github.com/AmrSioufy/Kubernetes-init
-
 This project aims to design an Ansible Role to initiate a Kubernetes cluster.
 
 The ansible role targeted 4 hosts:
