@@ -78,3 +78,27 @@ Installations are done on CentOS 7 8, Ubuntu
 - Installed Wordpress 
 
 
+### PROJECT FIVE ###
+[Ansible Role for Installing a Kubernetes Cluster](https://github.com/AmrSioufy/Kubernetes-init) ~ https://github.com/AmrSioufy/Kubernetes-init
+This project aims to design an Ansible Role to initiate a Kubernetes cluster.
+
+The ansible role targeted 4 hosts:
+
+1 master node
+1 worker node
+NFS server
+HAProxy
+
+This Role ensures that every managed host is configured for the following requirements:
+
+1.Yum Local Repo
+2.SELinux set to Permissive
+3.Firewall is Disabled
+4.No Swap is on the system
+5.Modify /etc/hosts
+6.Install CRI-O
+7.Install Kubelet Kubectl Kubeadm
+8.Install HAProxy on a dedicated host
+9.Install NFS-Server on a dedicated host
+10.Initiate Master-node
+
