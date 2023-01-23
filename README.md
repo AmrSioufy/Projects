@@ -10,7 +10,7 @@
 
 ### PROJECT ONE 
 #### [Installation of High Availability Kubernetes cluster with the following specifications and deployments](https://github.com/AmrSioufy/Projects/blob/main/HA-Kubernetes-Installation) 
-```
+
 ` spec: `
 
   &minus; `container_runtime: CRI-O `
@@ -42,7 +42,6 @@
   &minus; `Security: DMZ Node`
   
   &minus; `Logging: EFK (Elastic, Fluentd, Kibana) `
-  ```
  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
  
 ### PROJECT TWO ###
