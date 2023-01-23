@@ -7,7 +7,7 @@ Click on each project for redirection
 2. [Integrating on-premise LDAP Active Directory with Kubernetes cluster for user authentication in self-service applications(K8s Dashboard, Kubeapps) (WORK IN PROGRESS) ](https://github.com/AmrSioufy/Projects/blob/main/K8s%20LDAP%20integration%20using%20keycloak)
 3. [Linux based IoT Smart System to avoid collision between vehicles using Raspberry Pi](https://github.com/AmrSioufy/Raspberry-Pi)
 4. [Installing traditonal webservers on CentOS, Ubuntu ](https://github.com/AmrSioufy/Projects/blob/main/Web_Servers_on_different_distros)
-5. [Ansible Role for Installing a Kubernetes Cluster](https://github.com/AmrSioufy/Kubernetes-init)
+5. [Ansible Role for Installing a Kubernetes Cluster](https://github.com/AmrSioufy/kubernetes-installation)
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ### PROJECT ONE 
@@ -81,7 +81,7 @@ Installations are done on CentOS 7 8, Ubuntu
 
 
 ### PROJECT FIVE ###
-#### [Ansible Role for Installing a Kubernetes Cluster](https://github.com/AmrSioufy/Kubernetes-init) ~ https://github.com/AmrSioufy/Kubernetes-init
+#### [Ansible Role for Installing a Kubernetes Cluster](https://github.com/AmrSioufy/kubernetes-installation) ~ https://github.com/AmrSioufy/kubernetes-installation
 
 This project aims to design an Ansible Role to initiate a Kubernetes cluster.
 
