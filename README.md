@@ -54,7 +54,7 @@
 - keycloak will generate a JWT token to be used to authenticate the API user as well as to enable OAuth2 authorization for all OAuth protected APIs using OpenID Connect.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### PROJECT THREE ###
-[Linux based IoT Smart System to avoid collision between vehicles using Raspberry Pi](https://github.com/AmrSioufy/Raspberry-Pi)
+#### [Linux based IoT Smart System to avoid collision between vehicles using Raspberry Pi](https://github.com/AmrSioufy/Raspberry-Pi)
 #### Architecture
 - car_run.py > is the script that runs the car and processes data from distance sensor, stores car speed. based on that data decision is taken for different scenarios
 
@@ -71,7 +71,7 @@ After reading the sensor readings, data is stored in a text file to be fetched l
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ### PROJECT FOUR ###
-[Installing traditonal webservers on CentOS, Ubuntu ](https://github.com/AmrSioufy/Projects/blob/main/Web%20Servers%20on%20different%20distros)
+#### [Installing traditonal webservers on CentOS, Ubuntu ](https://github.com/AmrSioufy/Projects/blob/main/Web%20Servers%20on%20different%20distros)
 #### Scope
 Installations are done on CentOS 7 8, Ubuntu
 - Installed Apache, Nginx webservers while configuring SSL certs to its virtualhosts.
