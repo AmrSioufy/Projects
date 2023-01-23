@@ -11,17 +11,39 @@ This ansible role targeted 4 hosts:
 The project directory hierarchy is listed below.
 
 ```
-inventories/
-└── staging
-    ├── group_vars
-    │   ├── infrastructure.yaml
-    │   ├── k8snodes.yaml
-    │   ├── masternodes.yaml
-    │   └── workernodes.yaml
-    ├── hosts
-    └── host_vars
-        ├── myhaproxy.yaml
-        ├── mymaster.yaml
-        ├── mynfs.yaml
-        └── myworker.yaml
+├── files
+│   ├── modules-k8s.conf
+│   └── sysctl-k8s.conf
+├── handlers
+│   └── main.yml
+├── inventories
+│   └── staging
+│       ├── group_vars
+│       │   ├── infrastructure.yaml
+│       │   ├── k8snodes.yaml
+│       │   ├── masternodes.yaml
+│       │   └── workernodes.yaml
+│       ├── hosts
+│       └── host_vars
+│           ├── myhaproxy.yaml
+│           ├── mymaster.yaml
+│           ├── mynfs.yaml
+│           └── myworker.yaml
+├── meta
+│   └── main.yml
+├── README.md
+├── tasks
+│   ├── allhoststasks.yaml
+│   ├── haproxytasks.yaml
+│   ├── k8snodestasks.yaml
+│   ├── main.yaml
+│   ├── mastertasks.yaml
+│   ├── nfstasks.yaml
+│   └── workertasks.yaml
+├── templates
+│   ├── haproxy.j2
+│   └── staging_hosts.j2
+└── vars
+    └── main.yml
+
 ```
