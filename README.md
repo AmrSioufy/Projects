@@ -84,12 +84,12 @@ Installations are done on CentOS 7 8, Ubuntu
 This project aims to design an Ansible Role to initiate a Kubernetes cluster.
 
 The ansible role targeted 4 hosts:
-
+```
 1 master node
 1 worker node
 NFS server
 HAProxy
-
+```
 This Role ensures that every managed host is configured for the following requirements:
 ```
 1.Yum Local Repo
