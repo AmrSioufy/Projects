@@ -85,6 +85,10 @@ Installations are done on CentOS 7 8, Ubuntu
 
 This project aims to design an Ansible Role to initiate a Kubernetes cluster.
 
+To install role use;
+
+ansible-galaxy install amrsioufy.kubernetes_installation
+
 The ansible role targeted 4 hosts:
 ```
 1 master node
