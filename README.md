@@ -6,7 +6,7 @@ Click on each project for redirection
 1. [Installation of High Availability Kubernetes cluster](https://github.com/AmrSioufy/Projects/blob/main/HA-Kubernetes-Installation)
 2. [Integrating on-premise LDAP Active Directory with Kubernetes cluster for user authentication in self-service applications(K8s Dashboard, Kubeapps) (WORK IN PROGRESS) ](https://github.com/AmrSioufy/Projects/blob/main/K8s%20LDAP%20integration%20using%20keycloak)
 3. [Linux based IoT Smart System to avoid collision between vehicles using Raspberry Pi](https://github.com/AmrSioufy/Raspberry-Pi)
-4. [Installing traditonal webservers on CentOS, Ubuntu ](https://github.com/AmrSioufy/Projects/blob/main/Web_Servers_on_different_distros)
+4. [Beginner's guide for Installing traditonal webservers on CentOS, Ubuntu ](https://github.com/AmrSioufy/Projects/blob/main/Web_Servers_on_different_distros)
 5. [Ansible Role for Installing a Kubernetes Cluster](https://github.com/AmrSioufy/kubernetes-installation)
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -73,7 +73,7 @@ After reading the sensor readings, data is stored in a text file to be fetched l
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ### PROJECT FOUR ###
-#### [Installing traditonal webservers on CentOS, Ubuntu ](https://github.com/AmrSioufy/Projects/blob/main/Web%20Servers%20on%20different%20distros)
+#### [Beginner's guide for Installing traditonal webservers on CentOS, Ubuntu ](https://github.com/AmrSioufy/Projects/blob/main/Web%20Servers%20on%20different%20distros)
 #### Scope
 Installations are done on CentOS 7 8, Ubuntu
 - Installed Apache, Nginx webservers while configuring SSL certs to its virtualhosts.
