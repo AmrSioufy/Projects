@@ -1,0 +1,93 @@
+#!/bin/bash
+
+# Check if the project name argument is provided
+if [ $# -ne 1 ]; then
+    echo "Usage: $0 <project_name>"
+    exit 1
+fi
+
+project_name="$1"
+
+# Check if the project already exists
+if oc get project $project_name &>/dev/null; then
+    echo "Project '$project_name' already exists. Exiting."
+    exit 1
+fi
+
+# Create the project with the 'env: dev' label
+oc create project $project_name
+oc label project $project_name env=dev
+
+echo "Project '$project_name' created with label 'env: dev'."
+
+# Apply the NetworkPolicy rules
+echo "Applying NetworkPolicy rules..."
+
+oc apply -f - <<EOF
+---
+kind: NetworkPolicy
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: allow-from-same-namespace
+spec:
+  podSelector: {}
+  ingress:
+  - from:
+    - podSelector: {}
+---
+kind: NetworkPolicy
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: allow-from-openshift-ingress
+spec:
+  ingress:
+  - from:
+    - namespaceSelector:
+        matchLabels:
+          network.openshift.io/policy-group: ingress
+  podSelector: {}
+  policyTypes:
+  - Ingress
+---
+kind: NetworkPolicy
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: allow-from-namespaces-dev
+spec:
+  podSelector: {}
+  ingress:
+  - from:
+    - namespaceSelector:
+        matchLabels:
+          env: dev
+---
+kind: NetworkPolicy
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: allow-from-openshift-monitoring
+spec:
+  ingress:
+  - from:
+    - namespaceSelector:
+        matchLabels:
+          network.openshift.io/policy-group: monitoring
+  podSelector: {}
+---
+kind: NetworkPolicy
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: allow-from-kube-apiserver-operator
+spec:
+  ingress:
+  - from:
+    - namespaceSelector:
+        matchLabels:
+          kubernetes.io/metadata.name: openshift-kube-apiserver-operator
+      podSelector:
+        matchLabels:
+          app: kube-apiserver-operator
+  policyTypes:
+  - Ingress
+EOF
+
+echo "NetworkPolicy rules applied."
