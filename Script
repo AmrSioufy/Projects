@@ -15,8 +15,8 @@ if oc get project $project_name &>/dev/null; then
 fi
 
 # Create the project with the 'env: dev' label
-oc create project $project_name
-oc label project $project_name env=dev
+oc new-project $project_name
+oc label namespaces $project_name env=dev
 
 echo "Project '$project_name' created with label 'env: dev'."
 
