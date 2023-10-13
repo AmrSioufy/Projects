@@ -1,7 +1,1 @@
-sudo chmod 0600 /etc/cni/net.d/*
-sudo chmod 0600 /etc/kubernetes/static-pod-resources/kube-controller-manager-pod-*/configmaps/controller-manager-kubeconfig/kubeconfig
-sudo chmod 0600 /etc/kubernetes/manifests/etcd-pod.yaml
-sudo chmod 0600 /etc/kubernetes/static-pod-resources/kube-apiserver-pod-*/kube-apiserver-pod.yaml
-sudo chmod 0600 /etc/kubernetes/static-pod-resources/kube-controller-manager-pod-*/kube-controller-manager-pod.yaml
-sudo chmod 0644 /etc/kubernetes/static-pod-resources/kube-scheduler-pod-*/kube-scheduler-pod.yaml
-sudo chmod 0600 /etc/kubernetes/static-pod-resources/kube-scheduler-pod-*/configmaps/scheduler-kubeconfig/kubeconfig
+
