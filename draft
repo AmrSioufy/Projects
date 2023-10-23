@@ -1,6 +1,6 @@
-mkdir repo
-cp -vr /run/media/student/RHEL-8-6-0-/BaseOS/ /repo
-cp -vr /run/media/student/RHEL-8-6-0-/AppStream/ /repo
+mkdir /repo
+cp -vr /run/media/student/RHEL-8-6-0-/BaseOS /repo
+cp -vr /run/media/student/RHEL-8-6-0-/AppStream /repo
 vi /etc/yum.repos.d/rhel8.repo
 
 [InstallMedia-BaseOS]
