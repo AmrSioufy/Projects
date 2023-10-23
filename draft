@@ -1,1 +1,28 @@
+mkdir /repo_mountpoint/
+lsblk -fp #show iso image UUID, FSTYPE, Mountpoint
+nano /etc/fstab #edit fstab with mount specifications 
+#Example:
+UUID=2021-10-13-03-57-25-00 /repo_mountpoint       iso9660     defaults        0 0
 
+mount /repo_mountpoint/
+
+vi /etc/yum.repos.d/rhel8.repo
+
+[InstallMedia-BaseOS]
+name=Red Hat Enterprise Linux 8 - BaseOS
+metadata_expire=-1
+gpgcheck=1
+enabled=1
+baseurl=file:///repo_mountpoint/BaseOS/
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+
+[InstallMedia-AppStream]
+name=Red Hat Enterprise Linux 8 - AppStream
+metadata_expire=-1
+gpgcheck=1
+enabled=1
+baseurl=file:///repo_mountpoint/AppStream/
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+
+
+chmod 644 /etc/yum.repos.d/rhel8.repo
