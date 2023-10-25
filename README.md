@@ -1,5 +1,5 @@
 # This is a collection of projects that i have worked on
-https://drive.google.com/drive/folders/1ZDnOIdTr4YMofAG46hN1rP2sXmfUpJwU?usp=drive_link
+
 Click on each project for redirection
 
 ### Projects list
